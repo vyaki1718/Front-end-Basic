@@ -54,4 +54,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
        } 
        paddle.style.top = `${paddleY}px`;
     })
+
+    document.addEventListener('mousemove', (event)=>{
+        //  if(event.clientX > table.offsetLeft +(table.offsetWidth/2))  return
+         let mouseDistaonceFromTop = event.clientY // this is distance of the mouse point from the top of  screen
+         let distanceOfTableFromTop = table.offsetTop;
+         let mousePointControl = mouseDistaonceFromTop - distanceOfTableFromTop - paddle.offsetHeight/2;
+         paddleY = mousePointControl;
+         if(paddleY <= 0 || paddleY > table.offsetHeight- paddle.offsetHeight) return // if the bottom of paddle touches bottom of the table return
+         paddle.style.top = `${paddleY}px`;
+    })
 })
