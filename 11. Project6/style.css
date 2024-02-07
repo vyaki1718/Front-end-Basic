@@ -1,0 +1,74 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.first-image, .second-image, .third-image, .fourth-image{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.first-image{
+ background-image: url("./img/download.jpg");
+  min-height: 500px;
+  opacity: 0.8; /** bluriness to image*/
+}
+.second-image{
+ background-image: url('./img/images2.jpg');
+ min-height: 500px;
+}
+.third-image{ 
+ background-image: url('./img/images3.jpg');
+ min-height: 500px;
+}
+.fourth-image{
+ background-image: url("./img/images4.jpg");
+ min-height: 500px;
+}
+
+section{
+    text-align: center;
+    padding: 3rem 5rem;
+}
+
+.section-light{
+     background-color: #f4f4f4;
+     color: #0f0f0f;
+}
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.image{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+}
+
+.image div{
+     position: absolute;
+     top: 50%;
+     /* left: 50%; */
+     width: 100%;
+     text-align: center;
+     color: #f4f4f4;
+     font-size: 1.5rem;
+     letter-spacing: 8px;
+     text-transform: uppercase ;
+}
+
+.first-image span{
+    /* color: #0f0f0f; */
+    background-color: #111;
+    padding: 20px;
+}
